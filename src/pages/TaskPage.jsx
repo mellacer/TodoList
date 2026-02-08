@@ -7,25 +7,33 @@ function TaskPage() {
   const description = searchParams.get("description");
 
   return (
-    <div className="h-screen w-screen bg-slate-500 p-6">
-      <div className="w-[500px] mx-auto space-y-4">
-        <div className="flex justify-center relative mb-6">
+ <div className="min-h-screen bg-slate-500 px-4 py-6">
+      <div className="max-w-[500px] w-full mx-auto space-y-4">
+        
+        <div className="flex items-center justify-center relative mb-6">
           <button
             onClick={() => navigate(-1)}
-            className="absolute left-0 top-0 bottom-0 text-slate-100"
+            className="absolute left-0 text-slate-100 text-xl"
           >
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </button>
-          <h1 className="text-3xl text-slate-100 font-bold text-center">
+
+          <h1 className="text-2xl sm:text-3xl text-slate-100 font-bold text-center">
             Detalhes da Tarefa
           </h1>
         </div>
-        <div className="bg-slate-200 p-4 rounded-md">
-          <h2 className="text-xl font-bold text-slate-500">{title}</h2>
-          <p className="text-slate-800">{description}</p>
+
+        <div className="bg-slate-200 p-4 rounded-md break-words">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-500">
+            {title}
+          </h2>
+
+          <p className="text-slate-800 mt-2">
+            {description}
+          </p>
         </div>
       </div>
-    </div>
+    </div>>
   );
 }
 
